@@ -58,7 +58,6 @@ Entities of the database
 ![matchPlayersPicture](https://github.com/user-attachments/assets/ef58a1af-c28f-44f5-8c2a-1a587ef715ef)
 
 <br>
-<br>
 
 Views of the database
 ---
