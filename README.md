@@ -30,8 +30,8 @@ The database has a "rank_sys" scehma and inside of it 4 entities: ranks, players
 
 Entities of the database
 ---
-
-All rows were gotten from running the insertion commands in the insertionsAndExamples.sql file.
+> [!NOTE]
+> All rows were gotten from running the insertion commands in the insertionsAndExamples.sql file.
 
 <br>
 
