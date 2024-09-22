@@ -7,7 +7,7 @@ Rank_DBM_App is a rank database management application. It lets a user to log in
 Rank database
 ---
 
-The database has a **rank_sys** scehma and inside of it 4 entities: *Ranks*, *Players*, *Match_players*, and *Matches*. *Players* can enter matches and either win, lose or tie them. From this they can earn positive/negative elo points, which get added to their account via triggers (***trigger.sql***). With these elo points their rank gets detirmened and assigned. The more elo points they earn the bigger their rank is. Their match result is determined by the *Matches* table and its field *winning_team*. If the player during that match was a part of the *winning_team* he gets added elo points, if part of the losing he gets subtracted elo points and if it was a tie he gets added a smaller amount.
+The database has a **rank_sys** scehma and inside of it 4 entities: *Ranks*, *Players*, *Match_players*, and *Matches*. *Players* can enter matches and either win, lose or tie them. From this they can earn positive/negative elo points, which get added to their account via triggers (***trigger.sql***). With these elo points their rank gets detirmened and assigned. 
 
 <br>
 
