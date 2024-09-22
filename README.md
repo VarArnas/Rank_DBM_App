@@ -14,7 +14,7 @@ The database has a "rank_sys" scehma and inside of it 4 entities: ranks, players
 
 **The ER diagram of the database**
 
-![ER_rank_system](https://github.com/user-attachments/assets/cdcaeafc-3509-49d7-8876-6f6d06e7cdf0)
+<img src="[https://your-image-url.type](https://github.com/user-attachments/assets/cdcaeafc-3509-49d7-8876-6f6d06e7cdf0)" width="300">
 
 <br>
 
@@ -43,7 +43,7 @@ All rows were gotten from running the insertion commands in the insertionsAndExa
 
 **Matches entity** - used to record when and what match happened. Also stores which team of the match won. Its field winning_team can either have a 2, 1 or a 0 integer. The 1 and 2 symbolize the two teams which were playing the match and the 0 integer means there was't a winning team, therefore it's a tie.
 
-![MatchesDbPicture](https://github.com/user-attachments/assets/31d2cf46-322f-40f3-98c3-3a402897f8c5)
+![MatchesDbPicture](https://github.com/user-attachments/assets/6c7c6225-68fa-44b2-ba2a-158a1821f70c)
 
 **Match_players entity** - used as a junction table between Players and Matches entities, to resolve the many-to-many relation between them. A player can participate in multiple matches and a match can have multiple players. Each mach is allowed up to 4 players, 2 players per team, and two teams. Therefore, triggers were used to ensure this integrity.
 
