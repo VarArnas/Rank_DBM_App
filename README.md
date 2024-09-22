@@ -18,9 +18,12 @@ The database has a "rank_sys" scehma and inside of it 4 entities: ranks, players
 <br>
 
 **The relational schema of the database**
-![dbRelationalSchema](https://github.com/user-attachments/assets/c408a3f3-8ec1-4882-a98d-9edf8ae52072)
+
+![dbRelationalSchema](https://github.com/user-attachments/assets/c2c3e58b-b0a1-4231-9a02-327463d5bb80)
 
 <br>
 
 Tables
 ---
+
+
