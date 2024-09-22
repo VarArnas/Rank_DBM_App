@@ -37,7 +37,7 @@ The database has a **rank_sys** schema and inside of it 4 entities: *Ranks*, *Pl
 Entities of the database
 ---
 > [!NOTE]
-> All rows were gotten from running the insertion commands in the insertionsAndExamples.sql file.
+> All rows were gotten from running the insertion commands in the ***insertionsAndExamples.sql*** file.
 
 <br>
 
