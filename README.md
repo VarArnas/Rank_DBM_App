@@ -26,8 +26,12 @@ The database has a "rank_sys" scehma and inside of it 4 entities: ranks, players
 <br>
 
 
-Entities of the database (all rows are gotten from running the insertion commands in the insertionsAndExamples.sql file)
+Entities of the database
 ---
+
+All rows were gotten from running the insertion commands in the insertionsAndExamples.sql file.
+
+<br>
 
 **Players entity** - used to register players and store their elo points and rank (rank_id as the FK to Ranks entity)
 
@@ -39,7 +43,7 @@ Entities of the database (all rows are gotten from running the insertion command
 
 **Matches entity** - used to record when and what match happened. Also stores which team of the match won. Its field winning_team can either have a 2, 1 or a 0 integer. The 1 and 2 symbolize the two teams which were playing the match and the 0 integer means there was't a winning team, therefore it's a tie.
 
-![MatchesDbPicture](https://github.com/user-attachments/assets/bb31600c-e438-44dd-b59c-23229ba15b2e)
+![MatchesDbPicture](https://github.com/user-attachments/assets/31d2cf46-322f-40f3-98c3-3a402897f8c5)
 
 **Match_players entity** - used as a junction table between Players and Matches entities, to resolve the many-to-many relation between them. A player can participate in multiple matches and a match can have multiple players. Each mach is allowed up to 4 players, 2 players per team, and two teams. Therefore, triggers were used to ensure this integrity.
 
