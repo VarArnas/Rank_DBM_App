@@ -12,7 +12,7 @@ The database has a "rank_sys" scehma and inside of it 4 entities: ranks, players
 
 <br>
 
-- #**The ER diagram of the database**
+- **The ER diagram of the database**
 
 <img src="https://github.com/user-attachments/assets/cdcaeafc-3509-49d7-8876-6f6d06e7cdf0" width="800">
 
