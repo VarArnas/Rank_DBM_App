@@ -125,7 +125,7 @@ FOR EACH ROW EXECUTE FUNCTION rank_deletion();
 CREATE OR REPLACE FUNCTION before_insert_into_ranks()
 RETURNS TRIGGER AS $$
 DECLARE
-	tempRankId INTEGER;
+    tempRankId INTEGER;
     rankSameMax RECORD;
     rankSameMin RECORD;
     rankFullOverlap RECORD;
