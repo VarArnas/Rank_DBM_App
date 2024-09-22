@@ -1,7 +1,7 @@
 # Rank_DBM_App
 
 
-Rank_DBM_App is a rank database management application. It lets a user to log in with his administrator credentials into a **PostgreSQL** database (can be local or remote) and perform **CRUD** and other operations on the different entities of the rank database. A CLI has beeen implemented via **Java** and operations on the database using a java API **jdbc**. All the queries and other SQL statements are executed via prepared statements and for arguments bind parameters are used to prevent SQL injections. 
+Rank_DBM_App is a rank database management application. It lets a user to log in with his administrator credentials into a **PostgreSQL** database (can be local or remote) and perform **CRUD** and other operations on the different entities of the rank database. A **CLI** has beeen implemented via **Java** and operations on the database using a java API **jdbc**. All the queries and other SQL statements are executed via prepared statements and for arguments bind parameters are used to prevent SQL injections. 
 <br>
 
  Application CLI
