@@ -51,3 +51,16 @@ All rows were gotten from running the insertion commands in the insertionsAndExa
 
 ![matchPlayersPicture](https://github.com/user-attachments/assets/ef58a1af-c28f-44f5-8c2a-1a587ef715ef)
 
+<br>
+
+Views of the database
+---
+
+- **players_with_ranks** - this view joins the Players and Ranks tables to display what rank (and it's name) each player has.
+
+![ViewTablePicture](https://github.com/user-attachments/assets/6f46ca43-20bf-4908-90be-c86a21207a9b)
+
+-- **player_amount_for_rank** - this materialzied view joins the PLayers and Ranks table, and counts how mane players each rank has. To refresh this view use commnad `REFRESH MATERIALIZED VIEW player_amount_for_rank;` in psql.
+
+![matViewPicture](https://github.com/user-attachments/assets/1ae6e21f-c4f0-4d36-a791-e0b28defdd88)
+
