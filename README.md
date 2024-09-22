@@ -35,7 +35,7 @@ All rows were gotten from running the insertion commands in the insertionsAndExa
 
 <br>
 
-**Players entity** - used to register players and store their elo points and rank (rank_id as the FK to Ranks entity)
+**Players entity** - used to register players and store their elo points and rank (rank_id as the FK to Ranks entity). Players can get a rank only after participating in more than 5 matches (ensured by triggers), therefore, some players do not have a rank.
 
 ![playerDbPicture](https://github.com/user-attachments/assets/e25e8cb0-a2ac-4f78-97fc-416247b8624d)
 
