@@ -12,7 +12,7 @@ The database has a "rank_sys" scehma and inside of it 4 entities: ranks, players
 
 <br>
 
-**The ER diagram of the database**
+- **The ER diagram of the database**
 
 <img src="https://github.com/user-attachments/assets/cdcaeafc-3509-49d7-8876-6f6d06e7cdf0" width="800">
 
@@ -20,7 +20,7 @@ The database has a "rank_sys" scehma and inside of it 4 entities: ranks, players
 <br>
 <br>
 
-**The relational schema of the database**
+- **The relational schema of the database**
 
 ![rankDbRelationalSchema](https://github.com/user-attachments/assets/000a75b0-0744-4dc2-b146-6053917796c1)
 
@@ -35,19 +35,19 @@ All rows were gotten from running the insertion commands in the insertionsAndExa
 
 <br>
 
-**Players entity** - used to register players and store their elo points and rank (rank_id as the FK to Ranks entity). Players can get a rank only after participating in more than 5 matches (ensured by triggers), therefore, some players do not have a rank.
+- **Players entity** - used to register players and store their elo points and rank (rank_id as the FK to Ranks entity). Players can get a rank only after participating in more than 5 matches (ensured by triggers), therefore, some players do not have a rank.
 
 ![playerDbPicture](https://github.com/user-attachments/assets/e25e8cb0-a2ac-4f78-97fc-416247b8624d)
 
-**Ranks entity** - used to store all the possible ranks a player can get, and those ranks elo interval (elomin - elomax), by which triggers and the application decide what rank what player gets.
+- **Ranks entity** - used to store all the possible ranks a player can get, and those ranks elo interval (elomin - elomax), by which triggers and the application decide what rank what player gets.
 
 ![RankDbPicture](https://github.com/user-attachments/assets/41e98ab0-7ae7-4ec2-a759-4a7c2646492f)
 
-**Matches entity** - used to record when and what match happened. Also stores which team of the match won. Its field winning_team can either have a 2, 1 or a 0 integer. The 1 and 2 symbolize the two teams which were playing the match and the 0 integer means there was't a winning team, therefore it's a tie.
+- **Matches entity** - used to record when and what match happened. Also stores which team of the match won. Its field winning_team can either have a 2, 1 or a 0 integer. The 1 and 2 symbolize the two teams which were playing the match and the 0 integer means there was't a winning team, therefore it's a tie.
 
 ![MatchesDbPicture](https://github.com/user-attachments/assets/6c7c6225-68fa-44b2-ba2a-158a1821f70c)
 
-**Match_players entity** - used as a junction table between Players and Matches entities, to resolve the many-to-many relation between them. A player can participate in multiple matches and a match can have multiple players. Each mach is allowed up to 4 players, 2 players per team, and two teams. Therefore, triggers were used to ensure this integrity.
+- **Match_players entity** - used as a junction table between Players and Matches entities, to resolve the many-to-many relation between them. A player can participate in multiple matches and a match can have multiple players. Each mach is allowed up to 4 players, 2 players per team, and two teams. Therefore, triggers were used to ensure this integrity.
 
 ![matchPlayersPicture](https://github.com/user-attachments/assets/ef58a1af-c28f-44f5-8c2a-1a587ef715ef)
 
