@@ -39,28 +39,37 @@ Entities of the database
 
 ![playerDbPicture](https://github.com/user-attachments/assets/e25e8cb0-a2ac-4f78-97fc-416247b8624d)
 
+<br>
+
 - **Ranks entity** - used to store all the possible ranks a player can get, and those ranks elo interval (elomin - elomax), by which triggers and the application decide what rank what player gets.
 
 ![RankDbPicture](https://github.com/user-attachments/assets/41e98ab0-7ae7-4ec2-a759-4a7c2646492f)
 
+<br>
+
 - **Matches entity** - used to record when and what match happened. Also stores which team of the match won. Its field winning_team can either have a 2, 1 or a 0 integer. The 1 and 2 symbolize the two teams which were playing the match and the 0 integer means there was't a winning team, therefore it's a tie.
 
 ![MatchesDbPicture](https://github.com/user-attachments/assets/6c7c6225-68fa-44b2-ba2a-158a1821f70c)
+
+<br>
 
 - **Match_players entity** - used as a junction table between Players and Matches entities, to resolve the many-to-many relation between them. A player can participate in multiple matches and a match can have multiple players. Each mach is allowed up to 4 players, 2 players per team, and two teams. Therefore, triggers were used to ensure this integrity.
 
 ![matchPlayersPicture](https://github.com/user-attachments/assets/ef58a1af-c28f-44f5-8c2a-1a587ef715ef)
 
 <br>
+<br>
 
 Views of the database
 ---
 
-- **players_with_ranks** - this view joins the Players and Ranks tables to display what rank (and it's name) each player has.
+- **Players_with_ranks** - this view joins the Players and Ranks tables to display what rank (and it's name) each player has.
 
 ![ViewTablePicture](https://github.com/user-attachments/assets/6f46ca43-20bf-4908-90be-c86a21207a9b)
 
-- **player_amount_for_rank** - this materialzied view joins the PLayers and Ranks table, and counts how mane players each rank has. To refresh this view use commnad `REFRESH MATERIALIZED VIEW player_amount_for_rank;` in psql.
+<br>
+
+- **Player_amount_for_rank** - this materialzied view joins the PLayers and Ranks table, and counts how mane players each rank has. To refresh this view use commnad `REFRESH MATERIALIZED VIEW player_amount_for_rank;` in psql.
 
 ![matViewPicture](https://github.com/user-attachments/assets/1ae6e21f-c4f0-4d36-a791-e0b28defdd88)
 
@@ -82,7 +91,7 @@ Rules for data integrity of the database (triggers)
 - **4 players, 2 teams can participate in a match** - besides the 4 players, 2 teams per match, the same player is not allowed to pariticipate more than once in the same match. This was ensured via before_insert_match_players trigger.
 
 
- Application CLI:
+ Application CLI
  ---
 
  ![CLIpicture](https://github.com/user-attachments/assets/0c5897e7-8d53-40a9-8233-81d79e03fcd8)
