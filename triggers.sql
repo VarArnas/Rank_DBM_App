@@ -265,5 +265,5 @@ FOR EACH ROW EXECUTE FUNCTION check_match_id_insertion();
 
 
 -- For data integrity when discussing elo changes of players, whenever a match is deleted or the winning team is updated, 
--- it is handled inside the business logic of a the application responsible for managing this database
+-- it is handled inside the business logic of the application responsible for managing this database (SQLApplication)
 
