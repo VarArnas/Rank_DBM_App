@@ -4,6 +4,13 @@
 Rank_DBM_App is a rank database management application. It lets a user to log in with his administrator credentials into a **PostgreSQL** database (can be local or remote) and perform **CRUD** and other operations on the different entities of the rank database. A CLI has beeen implemented via **Java** and operations on the database using a java API **jdbc**. All the queries and other SQL statements are executed via prepared statements and for arguments bind parameters are used to prevent SQL injections. 
 <br>
 
+ Application CLI
+ ---
+
+ ![CLIpicture](https://github.com/user-attachments/assets/0c5897e7-8d53-40a9-8233-81d79e03fcd8)
+
+ <br>
+
 Rank database
 ---
 
@@ -87,11 +94,5 @@ Rules for data integrity of the database (triggers)
 - **The players' elo should be apart of their assigned rank's elo interval** - whenever a rank gets inserted/deleted and its neighbours' elo intervals get changed, each player's, if their *rank_id* was one of the neighbours, should be evaluated and changed, if now the elo interval inside of which was the player's elo is assigned to a different rank. The trigger which enforces this is: ***after_rank_insertion***.
 
 - **4 players, 2 teams can participate in a match** - besides the 4 players, 2 teams per match, the same player is not allowed to pariticipate more than once in the same match. This was ensured via ***before_insert_match_players*** trigger.
-
-
- Application CLI
- ---
-
- ![CLIpicture](https://github.com/user-attachments/assets/0c5897e7-8d53-40a9-8233-81d79e03fcd8)
 
 
