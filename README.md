@@ -68,14 +68,14 @@ Views of the database
 
 Rules for data integrity of the database (triggers)
 ---
-
-Even though triggers do make the database a lot more inefficient, they were used to make the actual application client for managing the database as thin as possible. For more information on each trigger and to better understand these rules refer to triggers.sql file.
+> [!NOTE]
+> Even though triggers do make the database a lot more inefficient, they were used to make the actual application client for managing the database as thin as possible. For more information on each trigger and to better understand these rules refer to triggers.sql file.
 
 - **Elo points for players after matches** - after each match a player must get either +300/50/25 or -300/50. He gets +/- 300 if he hadn't played more than 5 matches (i.e. his match_amount field is < 5). If he had played more than 5 matches then he gets only +/- 50. If its a tie then the player get +25. The trigger which implements this is: after_match_players_insert.
 
 - **If a match gets updated or deleted the participants' of the match elo should also get updated** - if a match gets deleted or its field winning_team gets changed then all of the 4 participants of the match elo should also get updated to reflect that. This is impleneted through the applications business logic, via methods: ChangeMatchWinnerAndUpdateElo() and DeleteMatchAndUpdatePlayer(), of the MatchManager class.
 
-- **All rank intervals should be coherent** - inside the Ranks table each ranks elo interval (elomin - elomax), should have neighbouring rank intervals. One of the neighbours interval's elomax should be equal to the rank's elomin and another neighbours elomin should be equal to the rank's elomax (besides the lowest and highest ranks). Whenever a new rank gets inserted or deleted its neighbour ranks' intervals should get adjusted accordingly. This was implemented via the after_rank_deletion and before_rank_insertion triggers.
+- **All rank intervals should be coherent** - inside the Ranks table each rank's elo interval (elomin - elomax), should have neighbouring rank intervals. One of the neighbours interval's elomax should be equal to the rank's elomin and another neighbours elomin should be equal to the rank's elomax (besides the lowest and highest ranks). Whenever a new rank gets inserted or deleted its neighbour ranks' intervals should get adjusted accordingly. This was implemented via the after_rank_deletion and before_rank_insertion triggers.
 
 - **The players' elo should be apart of their assigned rank's elo interval** - whenever a rank gets inserted/deleted and its neighbours' elo intervals get changed, each player's, if their rank was one of the neighbours should be evaluated and maybe changed, if now the elo interval inside of which was the player's elo is assigned to a different rank. The trigger which enforces this is: after_rank_insertion.
 
